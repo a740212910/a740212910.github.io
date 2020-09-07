@@ -13,4 +13,24 @@
         <tag>maven</tag>
       </tags>
   </entry>
+  <entry>
+    <title>反射</title>
+    <url>/2020/09/07/%E5%8F%8D%E5%B0%84/</url>
+    <content><![CDATA[<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><pre><code>https://www.cnblogs.com/chanshuyi/p/head_first_of_reflection.html</code></pre>
+<h2 id="普通调用"><a href="#普通调用" class="headerlink" title="普通调用"></a>普通调用</h2><pre><code>Apple apple = new Apple(); //直接初始化，「正射」
+apple.setPrice(4);</code></pre>
+<p>##反射步骤</p>
+<p>获取类的 Class 对象实例<br>    Class clz = Class.forName(“com.zhenai.api.Apple”);</p>
+<p>根据 Class 对象实例获取 Constructor 对象<br>    Constructor appleConstructor = clz.getConstructor();</p>
+<p>使用 Constructor 对象的 newInstance 方法获取反射类对象<br>    Object appleObj = appleConstructor.newInstance();</p>
+<p>而如果要调用某一个方法，则需要经过下面的步骤：<br>    获取方法的 Method 对象<br>        Method setPriceMethod = clz.getMethod(“setPrice”, int.class);<br>    利用 invoke 方法调用方法<br>        setPriceMethod.invoke(appleObj, 4);</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>反射</tag>
+      </tags>
+  </entry>
 </search>
