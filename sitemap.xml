@@ -46,7 +46,14 @@
 
   
   <url>
-    <loc>https://a740212910.github.io/tags/java-maven/</loc>
+    <loc>https://a740212910.github.io/tags/java/</loc>
+    <lastmod>2020-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://a740212910.github.io/tags/maven/</loc>
     <lastmod>2020-09-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
