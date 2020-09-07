@@ -38,6 +38,20 @@
   </url>
 
   
+  <url>
+    <loc>https://a740212910.github.io/tags/hexo/</loc>
+    <lastmod>2020-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://a740212910.github.io/categories/hexo/</loc>
+    <lastmod>2020-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>
