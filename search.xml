@@ -1,42 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>maven初解</title>
-    <url>/2020/09/07/maven%E5%88%9D%E8%A7%A3/</url>
-    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>在了解Maven之前，我们先来看看一个Java项目需要的东西。首先，我们需要确定引入哪些依赖包。例如，如果我们需要用到commons logging，我们就必须把commons logging的jar包放入classpath。如果我们还需要log4j，就需要把log4j相关的jar包都放到classpath中。这些就是依赖包的管理。</p>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>反射</title>
+      <link href="/2020/09/07/%E5%8F%8D%E5%B0%84/"/>
+      <url>/2020/09/07/%E5%8F%8D%E5%B0%84/</url>
+      
+        <content type="html"><![CDATA[<h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><h2 id="普通调用"><a href="#普通调用" class="headerlink" title="普通调用"></a>普通调用</h2><pre><code>Apple apple = new Apple(); //直接初始化，「正射」apple.setPrice(4);</code></pre><h2 id="反射步骤"><a href="#反射步骤" class="headerlink" title="反射步骤"></a>反射步骤</h2><pre><code>1. 获取类的 Class 对象实例    Class clz = Class.forName(&quot;com.zhenai.api.Apple&quot;);2. 根据 Class 对象实例获取 Constructor 对象    Constructor appleConstructor = clz.getConstructor();3. 使用 Constructor 对象的 newInstance 方法获取反射类对象    Object appleObj = appleConstructor.newInstance();4. 而如果要调用某一个方法，则需要经过下面的步骤：    - 获取方法的 Method 对象        Method setPriceMethod = clz.getMethod(&quot;setPrice&quot;, int.class);    - 利用 invoke 方法调用方法        setPriceMethod.invoke(appleObj, 4);</code></pre><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><pre><code>https://www.cnblogs.com/chanshuyi/p/head_first_of_reflection.html</code></pre>]]></content>
+      
+      
       <categories>
-        <category>java</category>
+          
+          <category> java </category>
+          
       </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>maven</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>反射</title>
-    <url>/2020/09/07/%E5%8F%8D%E5%B0%84/</url>
-    <content><![CDATA[<h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><h2 id="普通调用"><a href="#普通调用" class="headerlink" title="普通调用"></a>普通调用</h2><pre><code>Apple apple = new Apple(); //直接初始化，「正射」
-apple.setPrice(4);</code></pre>
-<h2 id="反射步骤"><a href="#反射步骤" class="headerlink" title="反射步骤"></a>反射步骤</h2><pre><code>1. 获取类的 Class 对象实例
-    Class clz = Class.forName(&quot;com.zhenai.api.Apple&quot;);
-2. 根据 Class 对象实例获取 Constructor 对象
-    Constructor appleConstructor = clz.getConstructor();
-3. 使用 Constructor 对象的 newInstance 方法获取反射类对象
-    Object appleObj = appleConstructor.newInstance();
-4. 而如果要调用某一个方法，则需要经过下面的步骤：
-    - 获取方法的 Method 对象
-        Method setPriceMethod = clz.getMethod(&quot;setPrice&quot;, int.class);
-    - 利用 invoke 方法调用方法
-        setPriceMethod.invoke(appleObj, 4);</code></pre>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><pre><code>https://www.cnblogs.com/chanshuyi/p/head_first_of_reflection.html</code></pre>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> 反射 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>maven初解</title>
+      <link href="/2020/09/07/maven%E5%88%9D%E8%A7%A3/"/>
+      <url>/2020/09/07/maven%E5%88%9D%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>在了解Maven之前，我们先来看看一个Java项目需要的东西。首先，我们需要确定引入哪些依赖包。例如，如果我们需要用到commons logging，我们就必须把commons logging的jar包放入classpath。如果我们还需要log4j，就需要把log4j相关的jar包都放到classpath中。这些就是依赖包的管理。</p>]]></content>
+      
+      
       <categories>
-        <category>java</category>
+          
+          <category> java </category>
+          
       </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>反射</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> maven </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
