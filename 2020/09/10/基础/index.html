@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    数据结构类型 |  个人博客
+    基础 |  个人博客
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -48,7 +48,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-数据结构类型"
+  id="post-基础"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -59,15 +59,15 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  数据结构类型
+  基础
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/" class="article-date">
-  <time datetime="2020-09-10T06:47:22.000Z" itemprop="datePublished">2020-09-10</time>
+      <a href="/2020/09/10/%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time datetime="2020-09-10T11:23:44.000Z" itemprop="datePublished">2020-09-10</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/java/">java</a>
@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">491</span>
+            <span class="post-count">900</span>
         </span>
     </span>
 
@@ -87,7 +87,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">3 分钟</span>
         </span>
     </span>
 </div>
@@ -102,35 +102,13 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><pre><code>## 类型
-    基本类型：byte，short，int，long，boolean，float，double，char
-    引用类型：所有class和interface类型
-    用类型可以赋值为null，表示空，但基本类型不能赋值为null：
-## 其他类型
-    ### 字符串
-        String
-            String内部是通过char[]数组表示的
-            String str = new String(new char[]&#123;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;&#125;)
-
-            String太常用了，所以Java提供了&quot;...&quot;这种字符串字面量表示方法
-
-            String的一个重要特点就是字符串不可变。这种不可变性是通过内部的private final char[]字段，以及没有任何修改char[]的方法实现的
-
-            str这个对象被更改了，其实，这只是一种假象罢了，JVM对于这几行代码是这样处理的，首先创建一个String对象str，并把“abc”赋值给str，然后在第三行中，其实JVM又创建了一个新的对象也名为str，然后再把原来的str的值和“de”加起来再赋值给新的str，而原来的str就会被JVM的垃圾回收机制（GC）给回收掉了，所以，str实际上并没有被更改，也就是前面说的String对象一旦创建之后就不可更改了
-
-            想比较字符串的内容是否相同。必须使用equals()方法而不能用==
-            ==基于他们在内存中的存放位置的地址值的
-        StringBuilder
-        StringJoiner
-        枚举类(enum)
-
-
-
-
-
-        较小的两个相同的Integer返回true，较大的两个相同的Integer返回false，这是因为Integer是不变类，编译器把Integer x = 127;自动变为Integer x = Integer.valueOf(127);，为了节省内存，Integer.valueOf()对于较小的数，始终返回相同的实例，因此，==比较“恰好”为true，但我们绝不能因为Java标准库的Integer内部有缓存优化就用==比较，必须用equals()方法比较两个Integer</code></pre>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><pre><code>https://www.cnblogs.com/weibanggang/p/9455926.html
-https://www.cnblogs.com/shenwen/p/8427450.html</code></pre>
+  <h2 id="方法重载-Overload"><a href="#方法重载-Overload" class="headerlink" title="方法重载(Overload)"></a>方法重载(Overload)</h2><p>在一个类中,方法名相同，但各自的参数不同，称为方法重载（Overload）<br>方法重载的返回值类型通常都是相同的</p>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>多态是指，针对某个类型的方法调用，其真正执行的方法取决于运行时期实际类型的方法<br>在继承关系中，子类如果定义了一个与父类方法签名完全相同的方法，被称为覆写（Override）<br>Override和Overload不同的是，如果方法签名如果不同，就是Overload，Overload方法是一个新方法；如果方法签名相同，并且返回值也相同，就是Override。</p>
+<p>注意：方法名相同，方法参数相同，但方法返回值不同，也是不同的方法。在Java程序中，出现这种情况，编译器会报错。<br>在子类的覆写方法中，如果要调用父类的被覆写的方法，可以通过super<br>继承可以允许子类覆写父类的方法。如果一个父类不允许子类对它的某个方法进行覆写，可以把该方法标记为final。用final修饰的方法不能被Override</p>
+<h2 id="抽象类-abstract"><a href="#抽象类-abstract" class="headerlink" title="抽象类(abstract)"></a>抽象类(abstract)</h2><p>由于多态的存在，每个子类都可以覆写父类的方法，父类Person的方法没有实际意义 可以把父类的方法声明为抽象方法<br>因为抽象类本身被设计成只能用于被继承，因此，抽象类可以强迫子类实现其定义的抽象方法，否则编译会报错</p>
+<h2 id="接口-interface"><a href="#接口-interface" class="headerlink" title="接口(interface)"></a>接口(interface)</h2><p>在抽象类中，抽象方法本质上是定义接口规范：即规定高层类的接口，从而保证所有子类都有相同的接口实现<br>如果一个抽象类没有字段，所有方法全部都是抽象方法 就可以把该抽象类改写为接口<br>所谓interface，就是比抽象类还要抽象的纯抽象接口，因为它连字段都不能有。因为接口定义的所有方法默认都是public abstract的，所以这两个修饰符不需要写出来<br>当一个具体的class去实现一个interface时，需要使用implements关键字<br>一个类只能继承自另一个类，不能从多个类继承。但是，一个类可以实现多个interface<br>一个interface可以继承自另一个interface。interface继承自interface使用extends</p>
+<p>实现类可以不必覆写default方法。default方法的目的是，当我们需要给接口新增一个方法时，会涉及到修改全部子类。如果新增的是default方法，那么子类就不必全部修改，只需要在需要覆写的地方去覆写新增方法。</p>
+<h2 id="静态字段和静态方法"><a href="#静态字段和静态方法" class="headerlink" title="静态字段和静态方法"></a>静态字段和静态方法</h2><p>实例字段在每个实例中都有自己的一个独立“空间”，但是静态字段只有一个共享“空间”，所有实例都会共享该字段<br>静态方法属于class而不属于实例，因此，静态方法内部，无法访问this变量，也无法访问实例字段，它只能访问静态字段。<br>通过实例变量也可以调用静态方法，但这只是编译器自动帮我们把实例改写成类名而已。<br>interface是一个纯抽象类，所以它不能定义实例字段。但是，interface是可以有静态字段的，并且静态字段必须为final类型<br>因为interface的字段只能是public static final类型，所以我们可以把这些修饰符都去掉</p>
  
       <!-- reward -->
       
@@ -189,7 +167,7 @@ https://www.cnblogs.com/shenwen/p/8427450.html</code></pre>
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://a740212910.github.io/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://a740212910.github.io/2020/09/10/%E5%9F%BA%E7%A1%80/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -202,19 +180,10 @@ https://www.cnblogs.com/shenwen/p/8427450.html</code></pre>
    
   <nav class="article-nav">
     
-      <a href="/2020/09/10/%E5%9F%BA%E7%A1%80/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            基础
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/09/07/%E5%8F%8D%E5%B0%84/" class="article-nav-link">
+      <a href="/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">反射</div>
+        <div class="article-nav-title">数据结构类型</div>
       </a>
     
   </nav>

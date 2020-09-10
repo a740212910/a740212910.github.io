@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>maven初解</title>
+    <url>/2020/09/07/maven%E5%88%9D%E8%A7%A3/</url>
+    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>在了解Maven之前，我们先来看看一个Java项目需要的东西。首先，我们需要确定引入哪些依赖包。例如，如果我们需要用到commons logging，我们就必须把commons logging的jar包放入classpath。如果我们还需要log4j，就需要把log4j相关的jar包都放到classpath中。这些就是依赖包的管理。</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>反射</title>
     <url>/2020/09/07/%E5%8F%8D%E5%B0%84/</url>
     <content><![CDATA[<h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><h2 id="普通调用"><a href="#普通调用" class="headerlink" title="普通调用"></a>普通调用</h2><pre><code>Apple apple = new Apple(); //直接初始化，「正射」
@@ -67,16 +80,21 @@ https://www.cnblogs.com/shenwen/p/8427450.html</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>maven初解</title>
-    <url>/2020/09/07/maven%E5%88%9D%E8%A7%A3/</url>
-    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>在了解Maven之前，我们先来看看一个Java项目需要的东西。首先，我们需要确定引入哪些依赖包。例如，如果我们需要用到commons logging，我们就必须把commons logging的jar包放入classpath。如果我们还需要log4j，就需要把log4j相关的jar包都放到classpath中。这些就是依赖包的管理。</p>
+    <title>基础</title>
+    <url>/2020/09/10/%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h2 id="方法重载-Overload"><a href="#方法重载-Overload" class="headerlink" title="方法重载(Overload)"></a>方法重载(Overload)</h2><p>在一个类中,方法名相同，但各自的参数不同，称为方法重载（Overload）<br>方法重载的返回值类型通常都是相同的</p>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>多态是指，针对某个类型的方法调用，其真正执行的方法取决于运行时期实际类型的方法<br>在继承关系中，子类如果定义了一个与父类方法签名完全相同的方法，被称为覆写（Override）<br>Override和Overload不同的是，如果方法签名如果不同，就是Overload，Overload方法是一个新方法；如果方法签名相同，并且返回值也相同，就是Override。</p>
+<p>注意：方法名相同，方法参数相同，但方法返回值不同，也是不同的方法。在Java程序中，出现这种情况，编译器会报错。<br>在子类的覆写方法中，如果要调用父类的被覆写的方法，可以通过super<br>继承可以允许子类覆写父类的方法。如果一个父类不允许子类对它的某个方法进行覆写，可以把该方法标记为final。用final修饰的方法不能被Override</p>
+<h2 id="抽象类-abstract"><a href="#抽象类-abstract" class="headerlink" title="抽象类(abstract)"></a>抽象类(abstract)</h2><p>由于多态的存在，每个子类都可以覆写父类的方法，父类Person的方法没有实际意义 可以把父类的方法声明为抽象方法<br>因为抽象类本身被设计成只能用于被继承，因此，抽象类可以强迫子类实现其定义的抽象方法，否则编译会报错</p>
+<h2 id="接口-interface"><a href="#接口-interface" class="headerlink" title="接口(interface)"></a>接口(interface)</h2><p>在抽象类中，抽象方法本质上是定义接口规范：即规定高层类的接口，从而保证所有子类都有相同的接口实现<br>如果一个抽象类没有字段，所有方法全部都是抽象方法 就可以把该抽象类改写为接口<br>所谓interface，就是比抽象类还要抽象的纯抽象接口，因为它连字段都不能有。因为接口定义的所有方法默认都是public abstract的，所以这两个修饰符不需要写出来<br>当一个具体的class去实现一个interface时，需要使用implements关键字<br>一个类只能继承自另一个类，不能从多个类继承。但是，一个类可以实现多个interface<br>一个interface可以继承自另一个interface。interface继承自interface使用extends</p>
+<p>实现类可以不必覆写default方法。default方法的目的是，当我们需要给接口新增一个方法时，会涉及到修改全部子类。如果新增的是default方法，那么子类就不必全部修改，只需要在需要覆写的地方去覆写新增方法。</p>
+<h2 id="静态字段和静态方法"><a href="#静态字段和静态方法" class="headerlink" title="静态字段和静态方法"></a>静态字段和静态方法</h2><p>实例字段在每个实例中都有自己的一个独立“空间”，但是静态字段只有一个共享“空间”，所有实例都会共享该字段<br>静态方法属于class而不属于实例，因此，静态方法内部，无法访问this变量，也无法访问实例字段，它只能访问静态字段。<br>通过实例变量也可以调用静态方法，但这只是编译器自动帮我们把实例改写成类名而已。<br>interface是一个纯抽象类，所以它不能定义实例字段。但是，interface是可以有静态字段的，并且静态字段必须为final类型<br>因为interface的字段只能是public static final类型，所以我们可以把这些修饰符都去掉</p>
 ]]></content>
       <categories>
         <category>java</category>
       </categories>
       <tags>
         <tag>java</tag>
-        <tag>maven</tag>
       </tags>
   </entry>
 </search>
