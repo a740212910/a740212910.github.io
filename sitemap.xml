@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://a740212910.github.io/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/</loc>
+    
+    <lastmod>2020-09-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://a740212910.github.io/2020/09/07/%E5%8F%8D%E5%B0%84/</loc>
     
     <lastmod>2020-09-08</lastmod>
@@ -39,7 +46,7 @@
 
   <url>
     <loc>https://a740212910.github.io/</loc>
-    <lastmod>2020-09-09</lastmod>
+    <lastmod>2020-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -47,21 +54,21 @@
   
   <url>
     <loc>https://a740212910.github.io/tags/java/</loc>
-    <lastmod>2020-09-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://a740212910.github.io/tags/maven/</loc>
-    <lastmod>2020-09-09</lastmod>
+    <lastmod>2020-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://a740212910.github.io/tags/%E5%8F%8D%E5%B0%84/</loc>
-    <lastmod>2020-09-09</lastmod>
+    <lastmod>2020-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://a740212910.github.io/tags/maven/</loc>
+    <lastmod>2020-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -70,7 +77,7 @@
   
   <url>
     <loc>https://a740212910.github.io/categories/java/</loc>
-    <lastmod>2020-09-09</lastmod>
+    <lastmod>2020-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
