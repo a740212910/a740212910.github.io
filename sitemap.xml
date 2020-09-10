@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://a740212910.github.io/2020/09/10/%E5%BC%82%E5%B8%B8/</loc>
+    
+    <lastmod>2020-09-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://a740212910.github.io/2020/09/10/%E5%9F%BA%E7%A1%80/</loc>
     
     <lastmod>2020-09-10</lastmod>
@@ -67,14 +74,14 @@
   </url>
   
   <url>
-    <loc>https://a740212910.github.io/tags/maven/</loc>
+    <loc>https://a740212910.github.io/tags/%E5%8F%8D%E5%B0%84/</loc>
     <lastmod>2020-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://a740212910.github.io/tags/%E5%8F%8D%E5%B0%84/</loc>
+    <loc>https://a740212910.github.io/tags/maven/</loc>
     <lastmod>2020-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
