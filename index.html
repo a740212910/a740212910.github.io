@@ -153,7 +153,7 @@
              ▲                   ▲
      ┌───────┘              ┌────┴──────────┐
      │                      │               │</code></pre>
-<p>┌─────────────────┐    ┌─────────────────┐┌───────────┐<br>│OutOfMemoryError │… │RuntimeException ││IOException│…<br>└─────────────────┘    └─────────────────┘└───────────┘<br>                                ▲<br>                    ┌───────────┴─────────────┐<br>                    │                         │<br>         ┌─────────────────────┐ ┌─────────────────────────┐<br>         │NullPointerException │ │IllegalArgumentException │…<br>         └─────────────────────┘ └─────────────────────────┘</p>
+<p>┌─────────────────┐    ┌─────────────────┐┌───────────┐<br>│OutOfMemoryError │    │RuntimeException ││IOException│<br>└─────────────────┘    └─────────────────┘└───────────┘<br>                                ▲<br>                    ┌───────────┴─────────────┐<br>                    │                         │<br>         ┌─────────────────────┐ ┌─────────────────────────┐<br>         │NullPointerException │ │IllegalArgumentException │<br>         └─────────────────────┘ └─────────────────────────┘</p>
 <p>从继承关系可知：Throwable是异常体系的根，它继承自Object。Throwable有两个体系：Error和Exception，Error表示严重的错误，程序对此一般无能为力，例如：</p>
 <p>OutOfMemoryError：内存耗尽<br>NoClassDefFoundError：无法加载某个Class<br>StackOverflowError：栈溢出<br>而Exception则是运行时的错误，它可以被捕获并处理。</p>
 <p>某些异常是应用程序逻辑处理的一部分，应该捕获并处理。例如：</p>
